@@ -1,0 +1,1 @@
+{"name":"hiveverse-ai","version":"1.0.0","private":true,"type":"module","description":"Interactive 3D honey-bee learning experience","scripts":{"dev":"node server.mjs","start":"node server.mjs","build":"node validate.mjs","test":"node --test tests/*.test.mjs"},"dependencies":{"three":"0.176.0"}}
