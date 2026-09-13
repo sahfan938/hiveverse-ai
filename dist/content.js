@@ -1,0 +1,34 @@
+export const zones = {
+ queen:{name:'Queen bee',sub:'THE HEART OF THE COLONY',position:[0,1.1,1],description:'The colony’s main reproductive female. Her eggs become the next generation, while her pheromones help maintain colony cohesion.',facts:['She may lay over 1,000 eggs a day in peak season.','Workers respond to queen pheromones; she does not command every bee.','A queen can live for several years.'],icon:'♛'},
+ worker:{name:'Worker bees',sub:'SMALL BEES. EXTRAORDINARY TEAMWORK.',position:[-2.2,0,1],description:'Female workers keep the hive alive. Their tasks generally change as they age, from caring for brood to foraging outdoors.',facts:['Nurse bees feed larvae and care for the queen.','Workers produce wax, build comb and guard the entrance.','Foragers gather nectar and pollen; fanning helps regulate temperature.'],icon:'✦'},
+ drone:{name:'Drone bees',sub:'THE MALES OF THE COLONY',position:[2.5,.2,1],description:'Drones are male honey bees. Their principal reproductive role is mating with virgin queens from other colonies.',facts:['Their large eyes help them locate queens in flight.','Drones do not forage for the colony and have no sting.','They develop from unfertilized eggs.'],icon:'◈'},
+ nursery:{name:'The nursery',sub:'WHERE EVERY BEE BEGINS',position:[-.8,-1.2,.8],description:'The brood nest holds eggs, larvae and pupae. Nurse bees feed the young, while workers help keep the brood nest warm.',facts:['Honey bees undergo complete metamorphosis.','A worker typically emerges about 21 days after the egg is laid.','Brood cells are capped before the pupal stage.'],icon:'◎'},
+ honey:{name:'Honey storage',sub:'SUNLIGHT, STORED FOR LATER',position:[2,1.7,.6],description:'Honey is the colony’s stored carbohydrate food. Workers concentrate nectar and seal ripe honey beneath a thin wax cap.',facts:['Enzymes help transform sugars in nectar.','Air movement and spreading nectar help water evaporate.','Wax-capped honey supplies energy when flowers are scarce.'],icon:'⬡'},
+ entrance:{name:'Hive entrance',sub:'THE COLONY’S CONNECTION TO THE WORLD',position:[0,-2,.8],description:'Foragers depart here and return with food. Guard bees help protect this busy threshold, while workers ventilate the hive.',facts:['Bees use landmarks and the sun to navigate.','Waggle dances communicate the direction and distance of food.','Pollen travels in baskets on a worker’s hind legs.'],icon:'↗'}
+};
+export const cells=[
+ {name:'Egg',time:'DAYS 1–3',text:'A tiny white egg rests at the base of the wax cell. After about three days, it hatches into a larva.'},
+ {name:'Larva',time:'DAYS 4–9',text:'The curved, legless larva grows rapidly as nurse bees feed it. All young larvae receive glandular food; future queens continue receiving a rich royal-jelly diet.'},
+ {name:'Pupa',time:'DAYS 10–20',text:'Inside the capped cell, the developing worker transforms. Legs, wings and compound eyes take shape.'},
+ {name:'Emerging bee',time:'AROUND DAY 21',text:'The young worker chews through the wax cap and emerges. Her first tasks include cleaning cells and caring for brood.'},
+ {name:'Honey',time:'ENERGY STORE',text:'Concentrated nectar becomes honey. This food reserve fuels the colony through periods when nectar is unavailable.'},
+ {name:'Pollen',time:'PROTEIN STORE',text:'Workers pack pollen into cells with nectar and secretions. This stored bee bread supplies protein and other nutrients.'},
+ {name:'Royal jelly',time:'NURSE-BEE FOOD',text:'Nurse bees produce this nutrient-rich glandular secretion. Young larvae receive it, and queen larvae are fed it abundantly.'},
+ {name:'Capped brood',time:'PROTECTED DEVELOPMENT',text:'A porous wax cap covers the developing bee. Beneath it, the larva spins a cocoon and becomes a pupa.'}
+];
+export const journey=[['A flower’s invitation','Flowers offer nectar. A foraging worker lands and reaches into the flower.'],['Collecting nectar','The worker draws nectar into her honey stomach, separate from her digestive stomach.'],['The flight home','She returns to the hive carrying nectar and sometimes pollen on her hind legs.'],['A remarkable handover','Nectar passes to receiver bees. Enzymes begin changing its sugars.'],['A little less water','Workers spread nectar in cells and fan their wings, helping water evaporate.'],['Nectar becomes honey','As moisture falls, the sugars become more concentrated.'],['Stored in wax','Workers store the ripe honey in hexagonal comb cells.'],['Sealed for the future','A thin wax cap protects this valuable food reserve.']];
+export const questions=[
+ ['What is the queen’s main role?',['Laying eggs','Collecting pollen','Building every cell','Guarding flowers'],0,'The queen is the main egg-laying female. Workers perform most other hive tasks.'],
+ ['Which bees gather nectar?',['Pupae','Workers','Drones','Only the queen'],1,'Foraging workers collect nectar and pollen.'],
+ ['What is a drone?',['A young queen','A wax cell','A male honey bee','A nurse bee'],2,'Drones are males whose principal reproductive role is mating.'],
+ ['What is the correct life-cycle order?',['Egg → larva → pupa → adult','Larva → egg → adult → pupa','Pupa → egg → larva → adult','Egg → adult → larva → pupa'],0,'Honey bees undergo complete metamorphosis through these four stages.'],
+ ['What is honey mainly made from?',['Soil','Flower petals','Tree bark','Nectar'],3,'Bees process and concentrate nectar to make honey.'],
+ ['Why do bees fan nectar?',['To add pollen','To help water evaporate','To freeze it','To turn it into wax'],1,'Fanning and spreading nectar help remove water.'],
+ ['What happens during pollination?',['Honey becomes wax','A bee lays eggs','Pollen reaches a flower’s stigma','A flower becomes a bee'],2,'Pollen transfer enables fertilization in flowering plants.'],
+ ['What shape are honeycomb cells?',['Hexagonal','Square','Triangular','Circular'],0,'The six-sided cells form an efficient shared-wall structure.'],
+ ['About how long does a worker take to develop from egg to adult?',['3 days','7 days','21 days','2 years'],2,'Worker development typically takes about 21 days.'],
+ ['Which action supports pollinators?',['Remove all flowers','Grow diverse native flowers','Destroy nesting habitat','Spray every flowering plant'],1,'Locally appropriate native flowers and protected nesting habitats support diverse pollinators.']
+];
+export const sources=[['University of Arizona · Honey bee basic biology','https://extension.arizona.edu/publication/honeybee-series-honeybee-basic-biology'],['UF/IFAS · Welcome to the hive','https://ask.ifas.ufl.edu/publication/4H419'],['US Forest Service · Pollinators in natural areas','https://research.fs.usda.gov/treesearch/53524']];
+export const translations={en:{enter:'Enter the hive',home:'Home'},ta:{enter:'கூட்டிற்குள் நுழையுங்கள்',home:'முகப்பு'},si:{enter:'මී වදයට ඇතුළු වන්න',home:'මුල් පිටුව'}};
+export function t(language,key){return translations[language]?.[key]??translations.en[key]??key;}

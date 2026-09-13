@@ -1,0 +1,6 @@
+const key='hiveverse-progress-v1';
+export function readProgress(){try{const p=JSON.parse(localStorage.getItem(key)||'{}');return {xp:Math.max(0,Number(p.xp)||0),rewards:Array.isArray(p.rewards)?p.rewards.filter(x=>typeof x==='string'):[],discovered:Array.isArray(p.discovered)?p.discovered.filter(x=>typeof x==='string'):[],bestScore:Math.min(10,Math.max(0,Number(p.bestScore)||0)),language:['en','ta','si'].includes(p.language)?p.language:'en',sound:!!p.sound};}catch{return {xp:0,rewards:[],discovered:[],bestScore:0,language:'en',sound:false};}}
+export const progress=readProgress();
+export function save(){try{localStorage.setItem(key,JSON.stringify(progress));}catch{/* Private browsing can disable storage. The experience still works in memory. */}}
+export function reward(id,xp){if(progress.rewards.includes(id))return false;progress.rewards.push(id);progress.xp+=xp;save();return true;}
+export const badges=[['Hive Explorer','Discover all six hive zones','all', '⬡'],['Queen Discoverer','Meet the queen','queen','♛'],['Pollination Hero','Complete your flower mission','mission','✿'],['Honey Expert','Follow nectar to honey','journey','◈'],['Bee Guardian','Complete the bee quiz','quiz','✦']];
